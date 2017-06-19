@@ -25,14 +25,14 @@ function drawList() {
     var item2 = document.createElement("li");
     var item3 = document.createElement("li");
     //add input to the li
-    item.innerHTML = "<b>Assigned To:</b> " + document.querySelector('input[name="assignto"]:checked').value;
-    item2.innerHTML = "<b>Level of Difficulty:</b> " + d.options[d.selectedIndex].value;
+    item.innerHTML = document.querySelector('input[name="assignto"]:checked').value;
+    item2.innerHTML = d.options[d.selectedIndex].value;
     item3.innerHTML = "<b>Task:</b> " + taskList.tasks[i].description;
   }
      //append li to ul
-    list.appendChild(item);
-    list.appendChild(item2);
-    list.appendChild(item3);
+    list.appendChild(item).setAttribute("class", "person");
+    list.appendChild(item2).setAttribute("class", "task-diff");
+    list.appendChild(item3).setAttribute("class", "task-descrip");
   //append the ul to #list-container
   listCont.appendChild(list);
 }
@@ -54,3 +54,4 @@ window.onload = function() {
   var form = document.querySelector("form");
   form.onSubmit = listBuilder;
 };
+
