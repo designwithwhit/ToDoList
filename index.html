@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>To Do List : Part 1</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab|Share+Tech+Mono">
+  </head>
+  <body>
+    <div id="left">
+  <div id="form-wrapper">
+    <h1>Add Task</h1>
+    <form onsubmit="listBuilder()" id="taskForm">
+      <h3>Assigned to:</h3>
+      <input type="radio" value="Whitney" name="assignto">Whitney</input>
+      <input type="radio" value="Emily" name="assignto">Emily</input>
+      <input type="radio" value="Eric" name="assignto">Eric</input>
+      <h3>Task Difficulty</h3>
+      <select id="difficulty">
+    <option value="Easy" name="easy">Easy</option>
+    <option value="Moderate" name="moderate">Moderate</option>
+    <option value="Difficult" name="difficult">Difficult</option>
+  </select>
+      <h3>Task Description</h3>
+      <textarea rows="4" cols="35" name="description"></textarea>
+      <input class="submit-button" type="submit"></input>
+    </form>
+  </div>
+</div>
+<div id="right">
+  <div id="list-container"></div>
+</div>
+<script src="script.js"></script>
+  </body>
+</html>
